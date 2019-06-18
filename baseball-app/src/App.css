@@ -41,11 +41,11 @@
   justify-content: space-around;
   /* border: 1px solid red; */
   /* padding: 0 1rem; */
-  width: 300px;
+  width: 500px;
   margin-top: 2rem;
 }
 .count-number {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 .ball-header {
   display: flex;
