@@ -9,5 +9,18 @@ describe("<App />", () => {
     const div = document.createElement("div");
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
-  });
+  })
+  it('renders Baseball Counter at top of app', () => {
+    const { getByText } = render(<App />)
+    getByText(/baseball counter/i)
+  })
+  it('renders balls header in count box', () => {
+    const { getByText } = render(<App />)
+    getByText(/balls/i)
+  })
+  it('renders strikes header in count box', () => {
+    const { getByText } = render(<App />)
+    getByText(/strikes/i)
+  })
+
 });
