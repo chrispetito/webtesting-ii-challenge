@@ -1,4 +1,5 @@
 import React from "react";
+import Display from "./Display";
 
 export default class Dashboard extends React.Component {
   state = {
@@ -11,12 +12,11 @@ export default class Dashboard extends React.Component {
       <div>
         <form>
           <h1>Baseball Counter</h1>
-          {this.state.balls}
-          {this.state.strikes}
+          <Display count={this.state}/>
           <button onClick={this.ball}>Ball</button>
           <button onClick={this.strike}>Strike</button>
-          <button>Foul</button>
-          <button>Hit</button>
+          <button onClick={this.foul}>Foul</button>
+          <button onClick={this.hit}>Hit</button>
         </form>
       </div>
     );
@@ -40,8 +40,8 @@ export default class Dashboard extends React.Component {
     event.preventDefault();
     if (this.state.strikes >= 2) {
       this.setState({
-        strikes: 0,
-        balls: 0
+        balls: 0,
+        strikes: 0
       });
     } else {
       this.setState({
@@ -49,4 +49,24 @@ export default class Dashboard extends React.Component {
       });
     }
   };
+
+  foul = event => {
+    event.preventDefault();
+    if (this.state.strikes >= 2) {
+      this.setState({
+        strikes: this.state.strikes
+      });
+    } else {
+      this.setState({
+        strikes: this.state.strikes + 1
+      });
+    }
+  };
+  hit = event => {
+      event.preventDefault()
+      this.setState({
+          balls: 0,
+          strikes: 0
+      })
+  }
 }
