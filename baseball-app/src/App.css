@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -30,4 +35,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+.count-box {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  /* padding: 0 1rem; */
+  width: 200px;
+}
+.count-number {
+  font-size: 5rem;
+}
+.ball-header {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+}
+.strike-header {
+  display: flex;
+  justify-content: flex-end;
 }
