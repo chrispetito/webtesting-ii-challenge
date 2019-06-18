@@ -11,12 +11,22 @@ export default class Dashboard extends React.Component {
     return (
       <div>
         <form>
-          <h1>Baseball Counter</h1>
-          <Display count={this.state}/>
-          <button onClick={this.ball}>Ball</button>
-          <button onClick={this.strike}>Strike</button>
-          <button onClick={this.foul}>Foul</button>
-          <button onClick={this.hit}>Hit</button>
+          <h1 className='counter-header'>Baseball Counter</h1>
+          <Display count={this.state} />
+          <div className='button-container'>
+            <button className="ball-btn" onClick={this.ball}>
+              Ball
+            </button>
+            <button className="strike-btn" onClick={this.strike}>
+              Strike
+            </button>
+            <button className="foul-btn" onClick={this.foul}>
+              Foul
+            </button>
+            <button className="hit-btn" onClick={this.hit}>
+              Hit
+            </button>
+          </div>
         </form>
       </div>
     );
@@ -63,10 +73,10 @@ export default class Dashboard extends React.Component {
     }
   };
   hit = event => {
-      event.preventDefault()
-      this.setState({
-          balls: 0,
-          strikes: 0
-      })
-  }
+    event.preventDefault();
+    this.setState({
+      balls: 0,
+      strikes: 0
+    });
+  };
 }
