@@ -12,9 +12,9 @@ describe("<App />", () => {
     ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-  it("renders At Bat Counter at top of app", () => {
+  it("renders Baseball Counter at top of app", () => {
     const { getByText } = render(<App />);
-    getByText(/at bat counter/i);
+    getByText(/^baseball counter$/i);
   });
   // it('renders balls header in count box', () => {
   //   const { getByText } = render(<App />)

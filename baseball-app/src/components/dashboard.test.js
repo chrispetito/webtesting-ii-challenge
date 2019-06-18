@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render, fireEvent, queryByText } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/react/cleanup-after-each";
-import { isTSAnyKeyword } from "@babel/types";
 import Dashboard from "./Dashboard";
 
 describe("<Dashboard />", () => {
@@ -15,28 +14,35 @@ describe("<Dashboard />", () => {
 describe("Ball Button", () => {
   it("adds one ball to the count", () => {
     const { getByText } = render(<Dashboard />);
-    const button = getByText(/ball/i);
+    const button = getByText(/^ball$/i);
     fireEvent.click(button);
+    getByText(/^Balls: 1$/i)
   });
 });
 describe("Strike Button", () => {
   it("adds one strike to the count", () => {
     const { getByText } = render(<Dashboard />);
-    const button = getByText(/strike/i);
+    const button = getByText(/^strike$/i);
     fireEvent.click(button);
+    // console.log(button)
+    getByText(/^Strikes: 1$/i)
+    // expec(/^strikes: 1$/i)).toBe('Strikes: 1')
   });
 });
 describe("Foul Button", () => {
   it("adds one strike to the count if there are less than 2", () => {
     const { getByText } = render(<Dashboard />);
-    const button = getByText(/foul/i);
+    const button = getByText(/^foul$/i);
     fireEvent.click(button);
+    getByText(/^Strikes: 1$/i)
   });
 });
 describe("Hit Button", () => {
   it("reduces strikes and balls down to zero after a hit is recorded", () => {
     const { getByText } = render(<Dashboard />);
-    const button = getByText(/hit/i);
+    const button = getByText(/^hit$/i);
     fireEvent.click(button);
+    getByText(/^Balls: 0$/i)
+    getByText(/^Strikes: 0$/i)
   });
 });
