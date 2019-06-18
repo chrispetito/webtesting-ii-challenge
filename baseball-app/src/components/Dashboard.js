@@ -11,7 +11,7 @@ export default class Dashboard extends React.Component {
     return (
       <div>
         <form>
-          <h1 className='counter-header'>Baseball Counter</h1>
+          <h1 className='counter-header'>At Bat Counter</h1>
           <Display count={this.state} />
           <div className='button-container'>
             <button className="ball-btn" onClick={this.ball}>
