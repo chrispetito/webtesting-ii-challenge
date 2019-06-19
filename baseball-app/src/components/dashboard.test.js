@@ -1,14 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/react/cleanup-after-each";
 import Dashboard from "./Dashboard";
 
 describe("<Dashboard />", () => {
   it("Dashboard renders without crashing", () => {
-    const div = document.createElement("div");
-    ReactDOM.render(<Dashboard />, div);
-    ReactDOM.unmountComponentAtNode(div);
+    render(<Dashboard />)
   });
 });
 describe("Ball Button", () => {
@@ -16,7 +13,7 @@ describe("Ball Button", () => {
     const { getByText } = render(<Dashboard />);
     const button = getByText(/^ball$/i);
     fireEvent.click(button);
-    getByText(/^Balls: 1$/i)
+    getByText(/^Balls: 1$/i);
   });
 });
 describe("Strike Button", () => {
@@ -25,7 +22,7 @@ describe("Strike Button", () => {
     const button = getByText(/^strike$/i);
     fireEvent.click(button);
     // console.log(button)
-    getByText(/^Strikes: 1$/i)
+    getByText(/^Strikes: 1$/i);
     // expec(/^strikes: 1$/i)).toBe('Strikes: 1')
   });
 });
@@ -34,7 +31,7 @@ describe("Foul Button", () => {
     const { getByText } = render(<Dashboard />);
     const button = getByText(/^foul$/i);
     fireEvent.click(button);
-    getByText(/^Strikes: 1$/i)
+    getByText(/^Strikes: 1$/i);
   });
 });
 describe("Hit Button", () => {
@@ -42,7 +39,7 @@ describe("Hit Button", () => {
     const { getByText } = render(<Dashboard />);
     const button = getByText(/^hit$/i);
     fireEvent.click(button);
-    getByText(/^Balls: 0$/i)
-    getByText(/^Strikes: 0$/i)
+    getByText(/^Balls: 0$/i);
+    getByText(/^Strikes: 0$/i);
   });
 });

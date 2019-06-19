@@ -12,7 +12,7 @@ export default class Dashboard extends React.Component {
       <div>
         <form>
           <h1 className='counter-header'>Baseball Counter</h1>
-          <Display count={this.state} />
+          <Display balls={this.state.balls} strikes={this.state.strikes}/>
           <div className='button-container'>
             <button className="ball-btn" onClick={this.ball}>
               Ball
