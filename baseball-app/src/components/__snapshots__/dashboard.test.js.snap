@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> dashboard matches snapshot 1`] = `
+<div>
+  <div>
+    <form>
+      <h1
+        class="counter-header"
+      >
+        Baseball Counter
+      </h1>
+      <div
+        class="count-box"
+      >
+        <div>
+          <h1
+            class="count-number"
+          >
+            Balls: 
+            0
+          </h1>
+        </div>
+        <div>
+          <h1
+            class="count-number"
+          >
+            Strikes: 
+            0
+          </h1>
+        </div>
+      </div>
+      <div
+        class="button-container"
+      >
+        <button
+          class="ball-btn"
+        >
+          Ball
+        </button>
+        <button
+          class="strike-btn"
+        >
+          Strike
+        </button>
+        <button
+          class="foul-btn"
+        >
+          Foul
+        </button>
+        <button
+          class="hit-btn"
+        >
+          Hit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

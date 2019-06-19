@@ -7,6 +7,10 @@ describe("<Dashboard />", () => {
   it("Dashboard renders without crashing", () => {
     render(<Dashboard />)
   });
+  it('dashboard matches snapshot', () => {
+    const { container } = render(<Dashboard />)
+    expect(container).toMatchSnapshot();
+  })
 });
 describe("Ball Button", () => {
   it("adds one ball to the count", () => {

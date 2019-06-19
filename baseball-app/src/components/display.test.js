@@ -7,4 +7,8 @@ describe('<Display />', () => {
     it('Display renders without crashing', () => {
         render(<Display />)
     })
+    it('display matches snapshot', () => {
+        const { container } = render(<Display />)
+        expect(container).toMatchSnapshot();
+    })
 })
