@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.count-box {
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+  /* padding: 0 1rem; */
+  width: 500px;
+  margin-top: 2rem;
+}
+.count-number {
+  font-size: 2rem;
+}
+.ball-header {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+  font-size: 1.4rem;
+}
+.strike-header {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.4rem;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+.button-container button {
+  width: 5rem;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+.counter-header {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.ball-btn {
+  color: #247BA0;
+  border: 1px solid #247BA0;
+}
+.strike-btn {
+  color: #FF1654;
+  border: 1px solid #FF1654;
+}
+.foul-btn {
+  color: #999999;
+  border: 1px solid #c4c4c4;
+}
+.hit-btn {
+  color: #70C1B3;
+  border: 1px solid #70C1B3;
+}
+.ball-btn:hover {
+  cursor: pointer;
+  background: rgba(36, 123, 160, 0.1);
+}
+.strike-btn:hover {
+  cursor: pointer;
+  background: rgba(255, 22, 84, 0.1);
+}
+.foul-btn:hover {
+  cursor: pointer;
+  background: rgba(196, 196, 196, 0.1);
+}
+.hit-btn:hover {
+  cursor: pointer;
+  background: rgba(112, 193, 179, 0.1);
+}
